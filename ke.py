@@ -3,8 +3,6 @@ import time
 import os
 import sys
 import aircv as ac
-import matplotlib.pyplot as plt # plt 用于显示图片
-import matplotlib.image as mpimg # mpimg 用于读取图片
 import threading
 from common.auto_adb import auto_adb
 from PIL import Image
@@ -30,9 +28,7 @@ def tap(position):
     adb.run(cmd)
 def main():
     pull_screenshot()
-    #plt.imshow(panduan1)
     position1=matchImg('autojump.png','panduan001.png',0.7)
-    #print(position1)
     if position1!=None:
         position=matchImg('autojump.png','b.png',0.7)
         if position!=None:
